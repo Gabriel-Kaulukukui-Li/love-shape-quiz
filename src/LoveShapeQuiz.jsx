@@ -3,12 +3,12 @@ import { useState, useEffect, useRef, useCallback } from "react";
 /* ─── DATA ─── */
 const QUESTIONS = [
   { id: 0, dim: "Intimacy", text: "I can share my worst thoughts without worrying they'll think less of me." },
-  { id: 1, dim: "Intimacy", text: "We can sit in silence and it doesn't feel empty." },
+  { id: 1, dim: "Intimacy", text: "We can sit in silence and it doesn't feel awkward." },
   { id: 2, dim: "Intimacy", text: "When something good or bad happens, they're the first person I want to tell." },
-  { id: 3, dim: "Intimacy", text: "I feel more like myself around them than I do around most people." },
+  { id: 3, dim: "Intimacy", text: "I feel more like myself around them." },
   { id: 4, dim: "Passion", text: "I think about them when they're not around." },
-  { id: 5, dim: "Passion", text: "There's a physical pull toward them I can't fully rationalize." },
-  { id: 6, dim: "Passion", text: "The thought of them with someone else doesn't just bother me intellectually. I feel it in my body." },
+  { id: 5, dim: "Passion", text: "There's a physical pull toward them I can't explain." },
+  { id: 6, dim: "Passion", text: "The thought of them with someone else bothers me" },
   { id: 7, dim: "Passion", text: "When we're together, everything else becomes background noise." },
   { id: 8, dim: "Commitment", text: "When things get difficult with them, my instinct is to work through it, not walk away." },
   { id: 9, dim: "Commitment", text: "I think about my life five years from now and they're in it." },
@@ -64,11 +64,11 @@ const ARCHETYPES = [
 ];
 
 const PREVIEW_ARCHETYPES = [
-  { name: "Consummate Love", desc: "All four, fully alive", values: [8.5, 8, 8.5, 7.5], color: "#ede6d6" },
-  { name: "The Situationship", desc: "Passion + freedom, no roots", values: [4.5, 7.5, 2.5, 8.5], color: "#c9705b" },
-  { name: "The Best Friend", desc: "Deep knowing, missing the spark", values: [8.5, 3, 5, 8], color: "#d4a574" },
-  { name: "The Deep End", desc: "Total immersion, lost yourself", values: [8, 8, 8, 2.5], color: "#5b7fb5" },
-  { name: "The Slow Burn", desc: "Steady warmth, built on trust", values: [8.5, 3.5, 8, 6], color: "#7a9e8e" },
+  { name: "Consummate Love", values: [8.5, 8, 8.5, 7.5], color: "#ede6d6" },
+  { name: "The Situationship", values: [4.5, 7.5, 2.5, 8.5], color: "#c9705b" },
+  { name: "The Best Friend", values: [8.5, 3, 5, 8], color: "#d4a574" },
+  { name: "The Deep End", values: [8, 8, 8, 2.5], color: "#5b7fb5" },
+  { name: "The Slow Burn", values: [8.5, 3.5, 8, 6], color: "#7a9e8e" },
 ];
 
 const DC = { Intimacy: "#d4a574", Passion: "#c9705b", Commitment: "#5b7fb5", Autonomy: "#7a9e8e" };
